@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'minimalism/css/base.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="nav-title">
+            <img src="{% static 'minimalism/img/brilliance.svg' %}" alt="">
+            <a href="#">MINIMALDIGITALISM LIFE</a>
+        </div>
+        <a href="#">MENU</a>
+    </nav>
+
+    <main>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+
+    <footer>
+        <a href="#">digitalism.com</a>
+        <a href="#">Contact</a>
+    </footer>
+</body>
+</html>

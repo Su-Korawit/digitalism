@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Kanit';
+    src: url('/static/fonts/kanit/Kanit-Regular.woff2') format('woff2'),
+         url('/static/fonts/kanit/Kanit-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Kanit', sans-serif;
+    width: 70%;
+    margin: 20px auto;
+}
+
+nav, footer {
+    .nav-title {
+        display: flex;
+        align-items: center;
+    }
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
