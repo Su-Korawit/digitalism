@@ -16,7 +16,11 @@ body {
     background-color: #fff;
     font-family: 'Kanit', sans-serif;
     width: 70%;
-    margin: 20px auto;
+    margin: 0px auto;
+}
+
+.blue {
+    color: blue;
 }
 
 nav, footer {
@@ -26,6 +30,7 @@ nav, footer {
     }
     display: flex;
     justify-content: space-between;
+    margin: 30px auto;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;

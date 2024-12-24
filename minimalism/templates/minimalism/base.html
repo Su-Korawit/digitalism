@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'minimalism/css/base.css' %}">
+    {% block script %}{%  endblock %}
 </head>
 <body>
     <nav>
         <div class="nav-title">
             <img src="{% static 'minimalism/img/brilliance.svg' %}" alt="">
-            <a href="#">MINIMALDIGITALISM LIFE</a>
+            <a href="#"> MINIMALDIGITALISM LIFE</a>
         </div>
-        <a href="#">MENU</a>
+        <div class="nav-user">
+            {% block bar-option %}
+            
+            {% endblock %}
+        </div>
     </nav>
 
     <main>
