@@ -38,14 +38,14 @@ class Project(models.Model):
 # Video Model
 class Video(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name="videos")
-    youtube_url = models.URLField()
-    title = models.CharField(max_length=255, blank=True)
+    video_id = models.CharField(max_length=20, null=True)
+    title = models.CharField(max_length=255, blank=True, null=True)  # เพิ่ม null=True
     description = models.TextField(blank=True, null=True)
     added_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         indexes = [
-            models.Index(fields=["project"]),
+            models.Index(fields=["project"]),  # สร้าง Index ให้กับฟิลด์ project
         ]
 
     def __str__(self):

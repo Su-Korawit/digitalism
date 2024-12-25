@@ -2,7 +2,7 @@
 
 {% block title %}HOME{% endblock %}
 
-{% block script %}
+{% block api-script %}
 <script src="https://accounts.google.com/gsi/client" async></script>
 {% endblock %}
 
@@ -13,13 +13,9 @@
 </div>
 {% else %}
 <div>
-  <div id="g_id_onload"
-    data-client_id="{{ google_client_id }}"
-    data-context="signin"
-    data-ux_mode="popup"
-    data-login_uri="http://localhost:8000/auth-receiver"
-    data-auto_prompt="false">
-</div>
+  <div id="g_id_onload" data-client_id="{{ google_client_id }}" data-context="signin" data-ux_mode="popup"
+    data-login_uri="http://localhost:8000/auth-receiver" data-auto_prompt="false">
+  </div>
 
   <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline" data-text="signin"
     data-size="medium" data-logo_alignment="left">
@@ -33,5 +29,26 @@
   <h1>ยินดีต้อนรับ, คุณเป็นอย่างไรบ้าง?</h1>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit inventore perferendis qui possimus cupiditate
     fugiat dolor iure nesciunt aliquid saepe!</p>
+</div>
+<div class="welcome">
+  <h1>จนถึงจุดนี้, เริ่มสร้างโครงงานของคุณ!</h1>
+  <a href="/search"><ins>Start Project</ins></a>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit inventore perferendis qui possimus cupiditate
+    fugiat dolor iure nesciunt aliquid saepe!</p>
+
+  <h2>Videos in this Project</h2>
+  {% if videos %}
+  <ul>
+    {% for video in videos %}
+    <li>
+      <img src="https://img.youtube.com/vi/{{ video.video_id }}/mqdefault.jpg" alt="{{ video.title }}"
+        style="width: 120px;">
+      <p>{{ video.title }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No videos added to this project yet.</p>
+  {% endif %}
 </div>
 {% endblock %}

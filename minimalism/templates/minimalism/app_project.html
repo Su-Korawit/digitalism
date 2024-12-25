@@ -1,0 +1,33 @@
+{% extends "minimalism/base.html" %}
+
+{% block title %}My Projects{% endblock %}
+
+{% block content %}
+<!-- <h1>Your Projects</h1>
+{% if projects %}
+<ul>
+    {% for project in projects %}
+    <li>
+        <a href="{% url 'project_detail' project.id %}">{{ project.title }}</a>
+        <p>{{ project.description|default:"No description available." }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>You have not created any projects yet. <a href="{% url 'create_project' %}">Create a new project</a></p>
+{% endif %} -->
+<h1>{{ project.title }}</h1>
+<p>{{ project.description|default:"No description available." }}</p>
+
+<h2>Videos</h2>
+{% if videos %}
+<ul>
+    {% for video in videos %}
+    <li>{{ video.title }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No videos in this project.</p>
+{% endif %}
+
+{% endblock %}

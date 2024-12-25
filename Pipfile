@@ -11,6 +11,12 @@ google-auth-oauthlib = "*"
 google-api-python-client = "*"
 django-allauth = "*"
 python-dotenv = "*"
+pyjwt = "==2.4.0"
+cryptography = "==3.4.8"
+gunicorn = "*"
+django-environ = "*"
+django-extensions = "*"
+requests-oauthlib = "*"
 
 [dev-packages]
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'minimalism/css/base.css' %}">
-    {% block script %}{%  endblock %}
+    {% block api-script %}{%  endblock %}
 </head>
 <body>
     <nav>
@@ -31,5 +31,9 @@
         <a href="#">digitalism.com</a>
         <a href="#">Contact</a>
     </footer>
+
+    {% block script %}
+
+    {% endblock %}
 </body>
 </html>

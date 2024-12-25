@@ -22,8 +22,8 @@ class ProjectAdmin(admin.ModelAdmin):
 # Register Video
 @admin.register(Video)
 class VideoAdmin(admin.ModelAdmin):
-    list_display = ('title', 'project', 'youtube_url', 'added_at')
-    search_fields = ('title', 'youtube_url')
+    list_display = ('title', 'project', 'video_id', 'added_at')
+    search_fields = ('title', 'video_id')
     list_filter = ('added_at',)
     ordering = ('-added_at',)
 
